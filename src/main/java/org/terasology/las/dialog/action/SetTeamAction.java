@@ -16,11 +16,14 @@
 
 package org.terasology.las.dialog.action;
 
+import org.terasology.dialogs.CloseDialogEvent;
 import org.terasology.dialogs.action.PlayerAction;
 import org.terasology.entitySystem.entity.EntityRef;
 import org.terasology.ligthandshadow.componentsystem.components.LASTeam;
 import org.terasology.logic.characters.CharacterComponent;
+import org.terasology.logic.players.LocalPlayer;
 import org.terasology.network.ClientComponent;
+import org.terasology.registry.In;
 
 /**
  *
@@ -33,20 +36,23 @@ public class SetTeamAction implements PlayerAction {
         this.team = team;
     }
 
+    @In
+    private LocalPlayer localPlayer;
+
     @Override
     public void execute(EntityRef charEntity, EntityRef talkTo) {
-
-        EntityRef controller = charEntity.getComponent(CharacterComponent.class).controller; // the client
-        ClientComponent clientComponent = controller.getComponent(ClientComponent.class);
-        EntityRef playerEntity = clientComponent.character;
-        LASTeam playerTeam = playerEntity.getComponent(LASTeam.class);
-        playerTeam.setTeam(team);
-        //EntityRef clientInfo = clientComponent.clientInfo;
-        //clientInfo.addComponent(new LASTeam(team));
+        charEntity.send(new SetTeamEvent(team));
     }
 
-    public String getTeam() {
-        return team;
-    }
-
+    //@Override
+    //public void execute(EntityRef charEntity, EntityRef talkTo) {
+     //   charEntity.send(new SetTeamEvent());
+        //EntityRef controller = charEntity.getComponent(CharacterComponent.class).controller; // the client
+        //ClientComponent clientComponent = controller.getComponent(ClientComponent.class);
+        //EntityRef playerEntity = clientComponent.character;
+        //EntityRef playerEntity = localPlayer.getCharacterEntity();
+        //LASTeam playerTeam = playerEntity.getComponent(LASTeam.class);
+        //playerTeam.team = "purple";
+        //playerTeam.setTeam(team);
+    //}
 }

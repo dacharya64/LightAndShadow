@@ -12,26 +12,21 @@
                     {
                         "text": "That's BLACK!",
                         "action": {
-                            "type": "NewDialogAction",
-                            "target": "blackColor"
+                            "type": "CloseDialogAction"
                         }
                     },
                     {
-                        "text": "That's WHITE!",
+                        "text": "That's RED!",
                         "action": {
-                            "type": "NewDialogAction",
-                            "target": "whiteColor"
-                        }
-                    },
-                    {
-                        "text": "Can't you see? It's obviously ${player.color}!",
+                                "type": "SetTeamAction",
+                                "team": "red"
+                        },
                         "action": {
-                            "type": "NewDialogAction",
-                            "target": "myColor"
+                                "type": "CloseDialogAction"
                         }
                     },
                     {
-                        "text": "I need to leave now ..",
+                        "text": "I need to leave now...",
                         "action": {
                             "type": "CloseDialogAction"
                         }
@@ -49,7 +44,7 @@
                         "text": "Yup, sounds great!",
                         "action": [{
                                 "type": "SetTeamAction",
-                                "team": "shadow"
+                                "team": "black"
                             },
                             {
                                 "type": "ChangeDialogAction",
@@ -70,8 +65,8 @@
                 ]
             },
             {
-                "id": "whiteColor",
-                "title": "White",
+                "id": "redColor",
+                "title": "Red",
                 "paragraphText": [
                     "Then you should come to the light!"
                 ],
@@ -80,7 +75,7 @@
                         "text": "Yup, sounds great!",
                         "action": [{
                                 "type": "SetTeamAction",
-                                "team": "light"
+                                "team": "red"
                             },
                             {
                                 "type": "ChangeDialogAction",
@@ -92,7 +87,7 @@
                         ]
                     },
                     {
-                        "text": "Ah well, maybe it's not really white ..",
+                        "text": "Ah well, maybe it's not really red...",
                         "action": {
                             "type": "NewDialogAction",
                             "target": "main"
@@ -111,11 +106,11 @@
                         "text": "That is a really weird conversation!",
                         "action": {
                             "type": "NewDialogAction",
-                            "target": "myColor2"
+                            "target": "CloseDialogAction"
                         }
                     },
                     {
-                        "text": "Ah well, maybe it's not really my favorite ..",
+                        "text": "Ah well, maybe it's not really my favorite...",
                         "action": {
                             "type": "NewDialogAction",
                             "target": "main"
@@ -142,3 +137,4 @@
         ]
     }
 }
+

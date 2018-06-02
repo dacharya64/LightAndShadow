@@ -1,11 +1,11 @@
 /*
- * Copyright 2014 MovingBlocks
+ * Copyright 2017 MovingBlocks
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *  http://www.apache.org/licenses/LICENSE-2.0
+ *      http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.terasology.ligthandshadow.componentsystem.components;
+package org.terasology.las.dialog.action;
 
-import org.terasology.entitySystem.Component;
+import org.terasology.entitySystem.event.Event;
 
-/**
- * Created by synopia on 25.01.14.
- */
-public final class LASTeam implements Component {
-    public String team;
+public class SetTeamEvent implements Event{
+    String team;
 
-    public LASTeam() {
-    }
-
-    public LASTeam(String team) {
+    public SetTeamEvent(String team) {
         this.team = team;
     }
-
 }
