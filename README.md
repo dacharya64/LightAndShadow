@@ -6,7 +6,7 @@ Light &amp; Shadow is an experimental game type set in a quirky Alice in Wonderl
 
 ## About this fork
 
-I worked on this module for Terasology working through Google Summer of Code. You can see blog posts about this project and its process [here](https://dacharya64.postach.io/tag/google-summer-of-code), with the final project wrapup outlining the technical details [here](https://dacharya64.postach.io/post/gsoc-final-project-wrapup). 
+I worked on this module for [Terasology](https://github.com/MovingBlocks/Terasology) working through Google Summer of Code. You can see blog posts about this project and its process [here](https://dacharya64.postach.io/tag/google-summer-of-code), with the final project wrapup outlining the technical details [here](https://dacharya64.postach.io/post/gsoc-final-project-wrapup). 
 
 This project builds upon the existing Terasology game engine, creating a Minimum Viable Product (MVP) for a Capture the Flag game mode in Terasology's Light and Shadow module.
 
@@ -27,6 +27,6 @@ This project builds upon the existing Terasology game engine, creating a Minimum
 
 ## Testing and Playing:
 
-The game mode is available to play. Download Terasology, fetch the Light and Shadow module, and run the game in singleplayer or multiplayer, selecting the Light & Shadow gameplay template and the Light and Shadow (Simple) world generator.
+The game mode is available to play. Download [Terasology](https://github.com/MovingBlocks/Terasology), fetch the Light and Shadow module, and run the game in singleplayer or multiplayer, selecting the Light & Shadow gameplay template and the Light and Shadow (Simple) world generator.
 
 
