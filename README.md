@@ -4,6 +4,6 @@ Light &amp; Shadow is an experimental game type set in a quirky Alice in Wonderl
 ![image1](images/2015-10-11-screenshot.png "Choose your team!")
 
 
-### License
+## About this fork
 
-This module is licensed under the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0.html).
+I worked on this module for Terasology working through Google Summer of Code. You can see blog posts about this project and its process [here](https://dacharya64.postach.io/tag/google-summer-of-code). 
